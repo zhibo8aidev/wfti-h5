@@ -1,8 +1,8 @@
 project_id: wfti-h5
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: design
-stage_status: in_progress
+current_stage: design_review
+stage_status: waiting_review
 source_inputs:
   idea: 开发一个嵌入直播吧 App 的世界杯球迷人格大鉴赏（WFTI）H5 活动，支持 16 题测试、人格结果、海报分享与站内联动。
   existing_prd:
@@ -14,18 +14,22 @@ available_artifacts:
   proposal_md: true
   specs_dir: true
   design_md: true
-  react_native_mockups: false
+  react_native_mockups: true
   tasks_md: false
   client_code: false
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews: []
+pending_reviews:
+- design_review
 openspec_change_id: null
 react_native_mockups:
-  status: null
-  entry: null
-  files: []
+  status: ready_for_review
+  entry: /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/react_native_mockups/index.html
+  files:
+  - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/react_native_mockups/index.html
+  - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/react_native_mockups/styles.css
+  - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/react_native_mockups/script.js
 repo_targets:
   client: /home/chenhuiming/.openclaw/projects/wfti-h5
   backend: /home/chenhuiming/.openclaw/projects/wfti-h5
@@ -83,13 +87,14 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Produce design.md and React Native high-fidelity mockups for review
+- Wait for explicit design approval
 orchestration_mode: strong
 validation:
   required_handoffs:
   - designer -> leader
-  required_runs: []
-  artifact_origin_verified: false
+  required_runs:
+  - ACP Codex design run
+  artifact_origin_verified: true
   last_validation_note: null
 last_decision:
   stage: prd_review
