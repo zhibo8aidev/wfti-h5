@@ -1,8 +1,8 @@
 project_id: wfti-h5
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: proposal_specs
-stage_status: in_progress
+current_stage: prd_review
+stage_status: waiting_review
 source_inputs:
   idea: 开发一个嵌入直播吧 App 的世界杯球迷人格大鉴赏（WFTI）H5 活动，支持 16 题测试、人格结果、海报分享与站内联动。
   existing_prd:
@@ -11,8 +11,8 @@ source_inputs:
   - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/source-design/design-spec.md
   existing_repo: []
 available_artifacts:
-  proposal_md: false
-  specs_dir: false
+  proposal_md: true
+  specs_dir: true
   design_md: false
   react_native_mockups: false
   tasks_md: false
@@ -20,7 +20,8 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews: []
+pending_reviews:
+- prd_review
 openspec_change_id: null
 react_native_mockups:
   status: null
@@ -83,13 +84,12 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate or import proposal.md and specs/
+- Wait for explicit PRD/specs approval
 orchestration_mode: strong
 validation:
-  required_handoffs:
-  - product -> leader
+  required_handoffs: []
   required_runs: []
-  artifact_origin_verified: false
+  artifact_origin_verified: true
   last_validation_note: null
 last_decision:
   stage: null
