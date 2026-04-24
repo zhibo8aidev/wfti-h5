@@ -5,7 +5,8 @@ current_stage: proposal_specs
 stage_status: in_progress
 source_inputs:
   idea: 开发一个嵌入直播吧 App 的世界杯球迷人格大鉴赏（WFTI）H5 活动，支持 16 题测试、人格结果、海报分享与站内联动。
-  existing_prd: []
+  existing_prd:
+  - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/source-prd/prd.md
   existing_design: []
   existing_repo: []
 available_artifacts:
@@ -28,8 +29,8 @@ repo_targets:
   client: /home/chenhuiming/.openclaw/projects/wfti-h5
   backend: /home/chenhuiming/.openclaw/projects/wfti-h5
 client_stack:
-  frontend: jetpack-compose
-  design_target: mobile-app
+  frontend: h5
+  design_target: mobile-web
 github:
   owner: zhibo8aidev
   repo: wfti-h5
@@ -64,7 +65,7 @@ execution_policy:
     agent: codex
     method: acp_codex
     cwd: /home/chenhuiming/.openclaw/projects/wfti-h5
-    stack: jetpack-compose
+    stack: h5
     follows:
     - proposal.md
     - specs/
@@ -81,7 +82,7 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate or import proposal.md and specs/
+- Generate proposal.md and specs/ from the imported source PRD
 orchestration_mode: strong
 validation:
   required_handoffs:
