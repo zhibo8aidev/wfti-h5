@@ -1,8 +1,8 @@
 project_id: wfti-h5
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: design_review
-stage_status: waiting_review
+current_stage: tech_design_tasks
+stage_status: in_progress
 source_inputs:
   idea: 开发一个嵌入直播吧 App 的世界杯球迷人格大鉴赏（WFTI）H5 活动，支持 16 题测试、人格结果、海报分享与站内联动。
   existing_prd:
@@ -20,8 +20,7 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews:
-- design_review
+pending_reviews: []
 openspec_change_id: null
 react_native_mockups:
   status: ready_for_review
@@ -87,18 +86,17 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Wait for explicit design approval
+- Produce and review tasks.md
 orchestration_mode: strong
 validation:
   required_handoffs:
-  - designer -> leader
-  required_runs:
-  - ACP Codex design run
-  artifact_origin_verified: true
+  - leader -> frontend/backend
+  required_runs: []
+  artifact_origin_verified: false
   last_validation_note: null
 last_decision:
-  stage: prd_review
+  stage: design_review
   decision: approved
   by: leader
-  at: '2026-04-24T15:23:44'
-  note: 批准 PRD wfti-h5
+  at: '2026-04-24T15:58:17'
+  note: 批准设计 wfti-h5
