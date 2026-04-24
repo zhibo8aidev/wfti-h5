@@ -82,7 +82,7 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate proposal.md and specs/ from the imported source PRD
+- Generate or import proposal.md and specs/
 orchestration_mode: strong
 validation:
   required_handoffs:
