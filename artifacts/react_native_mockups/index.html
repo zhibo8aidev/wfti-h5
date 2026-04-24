@@ -2,66 +2,108 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>WFTI H5 Design Mockup</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-device="390">
     <div class="review-shell">
       <aside class="review-nav">
-        <div>
-          <p class="eyebrow">WFTI H5</p>
-          <h1>高阶 3D 设计评审稿</h1>
+        <div class="nav-block">
+          <p class="eyebrow">WFTI H5 设计整改</p>
+          <h1>真实中文承载版评审稿</h1>
           <p class="nav-copy">
-            覆盖落地页、答题页、结果计算过渡页、结果页、分享海报与关键异常态。所有页面共享同一影棚地板底色变量。
+            本轮不重做风格，重点修正中文文案溢出、首屏关系混乱、底栏遮挡与信息挤爆问题。
           </p>
         </div>
-        <div class="nav-chips">
-          <span>390px KV</span>
-          <span>高亮影棚</span>
-          <span>底部防真空</span>
-          <span>层叠卡片</span>
+
+        <div class="nav-block">
+          <p class="section-label">评审重点</p>
+          <div class="nav-chips">
+            <span>390px KV 锚点</span>
+            <span>高亮影棚</span>
+            <span>首屏 + 下滑续读</span>
+            <span>底栏安全区</span>
+          </div>
+        </div>
+
+        <div class="nav-block">
+          <p class="section-label">设备比例</p>
+          <div class="device-switch" role="tablist" aria-label="device size">
+            <button class="switch-btn active" data-device-target="390">390 x 844</button>
+            <button class="switch-btn" data-device-target="430">430 x 932</button>
+          </div>
+          <p class="nav-copy small">
+            两种比例共用同一套信息结构。切换仅用于检查长屏下的呼吸感与底栏安全区。
+          </p>
         </div>
       </aside>
 
       <main class="phone-grid">
         <section class="phone-frame">
           <div class="phone-screen landing-screen">
-            <div class="logo-anchor">zhibo8</div>
-            <div class="ambient ambient-a"></div>
-            <div class="ambient ambient-b"></div>
-            <div class="hero-kv">
-              <div class="stadium-ring"></div>
-              <div class="stadium-ring ring-2"></div>
-              <div class="persona-core">
-                <div class="ball-shell"></div>
-                <div class="ball-panel"></div>
-                <div class="ball-panel panel-b"></div>
-                <div class="ball-glow"></div>
-              </div>
-              <div class="floating-badge badge-left">决赛夜</div>
-              <div class="floating-badge badge-right">人格秀场</div>
-              <div class="hero-copy">
-                <p class="eyebrow">WORLD CUP FAN TYPE INDEX</p>
-                <h2>世界杯球迷人格大鉴赏</h2>
-                <p class="slogan">你不是在看世界杯，你是在演你自己。</p>
-              </div>
+            <div class="screen-scroll">
+              <div class="logo-anchor">zhibo8</div>
+              <div class="ambient ambient-a"></div>
+              <div class="ambient ambient-b"></div>
+
+              <section class="hero-kv">
+                <div class="hero-kv-inner">
+                  <div class="stadium-ring"></div>
+                  <div class="stadium-ring ring-2"></div>
+                  <div class="persona-core">
+                    <div class="ball-shell"></div>
+                    <div class="ball-panel"></div>
+                    <div class="ball-panel panel-b"></div>
+                    <div class="ball-glow"></div>
+                  </div>
+                  <div class="floating-badge badge-left">决赛夜影棚</div>
+                  <div class="floating-badge badge-right">人格鉴赏仪式</div>
+                </div>
+                <div class="hero-copy">
+                  <p class="eyebrow">2026 世界杯特别企划</p>
+                  <h2>世界杯球迷人格大鉴赏</h2>
+                  <p class="slogan">你不是在看世界杯，你是在演你自己。</p>
+                </div>
+              </section>
+
+              <section class="layer-card intro-card">
+                <div class="mini-stats">
+                  <div><strong>16</strong><span>道题</span></div>
+                  <div><strong>3</strong><span>分钟</span></div>
+                  <div><strong>16</strong><span>型人格</span></div>
+                </div>
+                <p class="body-copy">
+                  从信仰、情绪、社交、行动四个维度，测出你的世界杯球迷人格档案。
+                </p>
+                <div class="social-proof">
+                  <span class="proof-dot"></span>
+                  已有 128,430 位吧友完成鉴赏
+                </div>
+              </section>
+
+              <section class="layer-card detail-card">
+                <div class="detail-head">
+                  <h3>你会得到什么</h3>
+                  <span>首屏结论 + 完整档案</span>
+                </div>
+                <div class="detail-list">
+                  <div class="detail-item">
+                    <strong>人格结论</strong>
+                    <p>先看到你的核心人格名和一句话结论，再下滑查看完整分析。</p>
+                  </div>
+                  <div class="detail-item">
+                    <strong>完整档案</strong>
+                    <p>包含八维雷达、深度解析、最佳拍档与天敌属性，适合分享和截图。</p>
+                  </div>
+                </div>
+              </section>
             </div>
 
-            <div class="layer-card intro-card">
-              <div class="mini-stats">
-                <div><strong>16</strong><span>道题</span></div>
-                <div><strong>3</strong><span>分钟</span></div>
-                <div><strong>16</strong><span>型人格</span></div>
-              </div>
-              <p class="body-copy">从信仰、情绪、社交、行动四大维度，识别你在世界杯夜里的真实人格剧本。</p>
-              <div class="social-proof">
-                <span class="proof-dot"></span>
-                已有 128,430 位吧友完成鉴赏
-              </div>
-            </div>
-
-            <div class="bottom-bar">
+            <div class="bottom-bar landing-bar">
               <button class="ghost-btn">查看我的结果</button>
               <button class="cta-btn">开始鉴赏</button>
             </div>
@@ -72,47 +114,54 @@
         <section class="phone-frame">
           <div class="phone-screen question-screen">
             <div class="topbar">
-              <button class="icon-btn">‹</button>
-              <div class="brand-pill">WFTI / Q05</div>
+              <button class="icon-btn" aria-label="back">‹</button>
+              <div class="brand-pill">世界杯球迷人格测试</div>
             </div>
 
             <div class="progress-panel">
               <div class="progress-meta">
-                <span>情绪模型 E1</span>
-                <strong>31% · 5/16</strong>
+                <span>第 16 题 · 冒险倾向 A2</span>
+                <strong>100% · 16/16</strong>
               </div>
               <div class="progress-track">
                 <div class="progress-fill"></div>
               </div>
             </div>
 
-            <div class="layer-card question-card">
-              <p class="question-index">Question 05</p>
-              <h2>你支持的球队在第 94 分钟头球绝杀了！你的反应是？</h2>
-              <p class="body-copy">选择最接近你真实行为的一项，系统将自动切到下一题。</p>
+            <div class="screen-scroll">
+              <section class="layer-card question-card">
+                <div class="question-head">
+                  <p class="question-index">最后一题</p>
+                  <span class="question-tag">最长题干校验</span>
+                </div>
+                <h2>凌晨 3 点有一场不涉及你主队的“神仙打架”对决，但你明天还有重要事，你会怎么做？</h2>
+                <p class="body-copy">
+                  题干与选项均按真实中文长度校验，优先保证阅读和点击舒适度，而不是单纯压小字号。
+                </p>
+              </section>
 
-              <div class="option-list">
+              <section class="option-panel">
                 <button class="option-card">
                   <span class="option-code">A</span>
-                  <span>内心波涛汹涌但表面只握拳一下，先冷静看 VAR 回放</span>
-                </button>
-                <button class="option-card active">
-                  <span class="option-code">B</span>
-                  <span>猛拍沙发大喊一声，立刻去评论区发庆祝</span>
+                  <span>理性胜出，定好闹钟，明天补看直播吧的回放和集锦。</span>
                 </button>
                 <button class="option-card">
-                  <span class="option-code">C</span>
-                  <span>原地起飞、抱住身边所有人，邻居以为地震了</span>
+                  <span class="option-code">B</span>
+                  <span>先睡到凌晨，闹钟响了如果醒了就看，太困就算了。</span>
                 </button>
+                <button class="option-card active">
+                  <span class="option-code">C</span>
+                  <span>还用想？这可能是一辈子只看一次的对决。看完再说，打哈欠是明天的事。</span>
+                </button>
+              </section>
+
+              <div class="helper-row">
+                <span>支持回退修改</span>
+                <span>24 小时内断点续答</span>
               </div>
             </div>
-
-            <div class="helper-row">
-              <span>支持回退修改</span>
-              <span>24h 内断点续答</span>
-            </div>
           </div>
-          <p class="frame-title">答题页</p>
+          <p class="frame-title">答题页 / 最长题干与选项场景</p>
         </section>
 
         <section class="phone-frame">
@@ -123,10 +172,16 @@
               <div class="scan-ring ring-b"></div>
               <div class="scan-sphere"></div>
             </div>
-            <h2>正在分析你的球迷 DNA……</h2>
-            <p class="body-copy">隐藏人格优先识别中，随后进行 16 型人格匹配。</p>
+            <p class="eyebrow">结果生成中</p>
+            <h2>正在生成你的球迷人格档案</h2>
+            <p class="body-copy">先识别隐藏人格，再完成 16 型人格匹配。</p>
             <div class="dna-tags">
-              <span>F1</span><span>F2</span><span>E1</span><span>E2</span><span>S1</span><span>S2</span><span>A1</span><span>A2</span>
+              <span>忠诚度</span>
+              <span>专业度</span>
+              <span>情绪烈度</span>
+              <span>抗挫韧性</span>
+              <span>社交偏好</span>
+              <span>表达欲望</span>
             </div>
           </div>
           <p class="frame-title">结果计算过渡页</p>
@@ -134,100 +189,197 @@
 
         <section class="phone-frame">
           <div class="phone-screen result-screen">
-            <div class="logo-anchor">zhibo8</div>
-            <div class="result-hero">
-              <div class="result-copy">
-                <p class="eyebrow">PERSONA 07 / COMMANDER</p>
-                <h2>热血掌旗官</h2>
-                <p class="body-copy">你把每场比赛都活成主场巡游，情绪够满，号召力更满。</p>
-              </div>
-              <div class="persona-illustration">
-                <div class="figure-head"></div>
-                <div class="figure-body"></div>
-                <div class="prop-card">队旗</div>
-                <div class="prop-card prop-b">应援喇叭</div>
-              </div>
-              <div class="tag-cloud">
-                <span>气氛发动机</span>
-                <span>主场人格</span>
-                <span>戏剧张力</span>
-                <span>熬夜不退场</span>
-                <span>评论区领队</span>
-                <span>绝杀放大器</span>
-              </div>
+            <div class="result-header">
+              <div class="logo-anchor static">zhibo8</div>
             </div>
 
-            <div class="layer-card result-card">
-              <div class="radar-card">
-                <div class="radar-grid"></div>
-                <div class="radar-fill"></div>
-                <div class="radar-labels">
-                  <span>信仰</span><span>专业</span><span>情绪</span><span>韧性</span><span>社交</span><span>表达</span><span>投入</span><span>冒险</span>
+            <div class="screen-scroll result-scroll">
+              <section class="result-hero">
+                <div class="result-copy">
+                  <p class="eyebrow">人格编号 07</p>
+                  <div class="identity-row">
+                    <h2>热血掌旗官</h2>
+                    <span class="persona-id">COMMANDER</span>
+                  </div>
+                  <p class="lead-copy">
+                    你把每场比赛都活成主场巡游。情绪很满，号召力更满，天生适合带节奏。
+                  </p>
                 </div>
-              </div>
-              <div class="insight-card">
-                <h3>人格解析</h3>
-                <p>你享受看球时的集体能量，愿意把情绪推到最满，也自然会成为身边球迷的节奏发起者。</p>
-              </div>
-              <div class="duo-grid">
-                <div class="duo-item"><strong>球星对照</strong><span>贝克汉姆式情绪领航</span></div>
-                <div class="duo-item"><strong>最佳拍档</strong><span>冷静分析师</span></div>
-                <div class="duo-item"><strong>天敌属性</strong><span>摆烂型看球人</span></div>
-              </div>
-              <div class="qr-panel">
-                <div class="qr-box"></div>
-                <div>
-                  <strong>扫码查看完整人格档案</strong>
-                  <p class="body-copy">分享给朋友，一起鉴赏谁才是真正的世界杯人格戏精。</p>
+
+                <div class="result-stage">
+                  <div class="persona-illustration">
+                    <div class="figure-head"></div>
+                    <div class="figure-body"></div>
+                    <div class="prop-card">队旗</div>
+                    <div class="prop-card prop-b">应援喇叭</div>
+                  </div>
+                  <div class="tag-cloud">
+                    <span>气氛发动机</span>
+                    <span>主场人格</span>
+                    <span>绝杀放大器</span>
+                    <span>评论区领队</span>
+                    <span>熬夜不退场</span>
+                  </div>
                 </div>
-              </div>
+
+                <div class="hero-hint">
+                  <span>下滑查看完整人格档案</span>
+                </div>
+              </section>
+
+              <section class="result-section quick-section">
+                <div class="section-head">
+                  <h3>人格速览</h3>
+                  <span>首屏只保留结论</span>
+                </div>
+                <div class="quick-grid">
+                  <div class="quick-item">
+                    <strong>看球状态</strong>
+                    <p>情绪拉满，擅长把身边人一起带进比赛情境。</p>
+                  </div>
+                  <div class="quick-item">
+                    <strong>社交角色</strong>
+                    <p>更像局面的发起者，喜欢把评论区和线下氛围一起点燃。</p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="result-section">
+                <div class="section-head">
+                  <h3>八维雷达</h3>
+                  <span>完整档案</span>
+                </div>
+                <div class="radar-card">
+                  <div class="radar-grid"></div>
+                  <div class="radar-fill"></div>
+                  <div class="radar-labels">
+                    <span>信仰</span>
+                    <span>专业</span>
+                    <span>情绪</span>
+                    <span>韧性</span>
+                    <span>社交</span>
+                    <span>表达</span>
+                    <span>投入</span>
+                    <span>冒险</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="result-section">
+                <div class="section-head">
+                  <h3>人格解析</h3>
+                  <span>下放到二屏阅读</span>
+                </div>
+                <div class="insight-card">
+                  <p>
+                    你享受看球时的集体能量，也愿意把情绪推到最满。比赛一旦进入关键节点，你往往会自然成为身边球迷的节奏发起者。
+                  </p>
+                  <p>
+                    你适合热闹、需要共鸣、愿意投入，赢球时最像庆典总导演，输球时也会把失落放大成一种戏剧体验。
+                  </p>
+                </div>
+              </section>
+
+              <section class="result-section">
+                <div class="section-head">
+                  <h3>关系对照</h3>
+                  <span>分块阅读更轻松</span>
+                </div>
+                <div class="duo-grid">
+                  <div class="duo-item">
+                    <strong>球星对照</strong>
+                    <span>贝克汉姆式情绪领航</span>
+                  </div>
+                  <div class="duo-item">
+                    <strong>最佳拍档</strong>
+                    <span>冷静分析师</span>
+                  </div>
+                  <div class="duo-item">
+                    <strong>天敌属性</strong>
+                    <span>摆烂型看球人</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="result-section qr-section">
+                <div class="section-head">
+                  <h3>分享与回看</h3>
+                  <span>预留扫码安全区</span>
+                </div>
+                <div class="qr-panel">
+                  <div class="qr-box"></div>
+                  <div class="qr-copy">
+                    <strong>扫码查看完整人格档案</strong>
+                    <p class="body-copy">发给朋友，一起鉴赏谁才是真正的世界杯戏剧型球迷。</p>
+                  </div>
+                </div>
+              </section>
             </div>
 
             <div class="bottom-bar triple">
-              <button class="ghost-btn">重新预测</button>
-              <button class="ghost-btn">保存相册</button>
+              <button class="ghost-btn">重新测试</button>
+              <button class="ghost-btn">保存结果图</button>
               <button class="cta-btn">分享名片</button>
             </div>
           </div>
-          <p class="frame-title">结果页</p>
+          <p class="frame-title">结果页 / 首屏重点 + 下滑续读</p>
         </section>
 
         <section class="phone-frame">
           <div class="phone-screen poster-screen">
-            <div class="poster-sheet">
-              <div class="poster-top">
-                <p class="eyebrow">WFTI SHARE POSTER</p>
-                <h2>热血掌旗官</h2>
-                <p class="slogan">把每场比赛都活成主场巡游的人</p>
-              </div>
-              <div class="poster-visual">
-                <div class="poster-figure"></div>
-                <div class="poster-badge">COMMANDER</div>
-              </div>
-              <div class="poster-radar"></div>
-              <div class="poster-insight">
-                你是气氛发动机，也是情绪扩音器。赢球要庆典，绝杀要巡游，世界杯在你这里从来不是“看完”，而是“演完”。
-              </div>
-              <div class="poster-footer">
-                <div class="poster-qr">
-                  <div class="qr-box"></div>
-                  <span>扫码测你的人格</span>
+            <div class="screen-scroll poster-scroll">
+              <div class="poster-sheet">
+                <div class="poster-top">
+                  <p class="eyebrow">世界杯球迷人格海报</p>
+                  <div class="poster-title-row">
+                    <h2>热血掌旗官</h2>
+                    <span class="poster-code">07</span>
+                  </div>
+                  <p class="poster-slogan">把比赛活成主场巡游的人。</p>
                 </div>
-                <div class="poster-brand">zhibo8 / 世界杯球迷人格大鉴赏</div>
+
+                <div class="poster-visual">
+                  <div class="poster-figure"></div>
+                  <div class="poster-badge">COMMANDER</div>
+                </div>
+
+                <div class="poster-metrics">
+                  <span>情绪高燃</span>
+                  <span>社交外放</span>
+                  <span>投入拉满</span>
+                </div>
+
+                <div class="poster-insight">
+                  你擅长把看球现场点成庆典，适合在人群中带节奏，也最容易把绝杀时刻推向最高点。
+                </div>
+
+                <div class="poster-footer">
+                  <div class="poster-brand">
+                    <strong>世界杯球迷人格大鉴赏</strong>
+                    <p>扫码查看你的完整人格档案</p>
+                  </div>
+                  <div class="poster-qr">
+                    <div class="qr-box"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <p class="frame-title">分享海报态</p>
+          <p class="frame-title">分享海报态 / 成品传播物</p>
         </section>
 
         <section class="phone-frame">
           <div class="phone-screen status-screen">
-            <div class="status-orb"></div>
-            <div class="layer-card status-card">
-              <p class="eyebrow">NOT STARTED</p>
-              <h2>活动即将开始</h2>
-              <p class="body-copy">世界杯人格鉴赏影棚正在布光，开场后你会第一时间被邀请入场。</p>
-              <button class="cta-btn full">开赛提醒我</button>
+            <div class="screen-scroll status-scroll">
+              <div class="status-orb"></div>
+              <section class="layer-card status-card">
+                <p class="eyebrow">活动未开始</p>
+                <h2>影棚正在布光</h2>
+                <p class="body-copy">
+                  世界杯球迷人格鉴赏即将开场。活动开启后，你会第一时间收到入场提醒。
+                </p>
+                <button class="cta-btn full">开赛提醒我</button>
+              </section>
             </div>
           </div>
           <p class="frame-title">异常态 / 活动未开始</p>
@@ -235,17 +387,21 @@
 
         <section class="phone-frame">
           <div class="phone-screen status-screen ended">
-            <div class="status-orb orb-gold"></div>
-            <div class="layer-card status-card">
-              <p class="eyebrow">EVENT CLOSED</p>
-              <h2>活动已结束</h2>
-              <p class="body-copy">感谢参与。本届最热门的三种球迷人格仍在站内持续刷屏。</p>
-              <div class="top3-list">
-                <span>01 热血掌旗官</span>
-                <span>02 冷静分析师</span>
-                <span>03 黑马预言家</span>
-              </div>
-              <button class="ghost-btn full">返回首页</button>
+            <div class="screen-scroll status-scroll">
+              <div class="status-orb orb-gold"></div>
+              <section class="layer-card status-card">
+                <p class="eyebrow">活动已结束</p>
+                <h2>本轮鉴赏已收官</h2>
+                <p class="body-copy">
+                  感谢参与。本届最热门的三种球迷人格仍在站内持续刷屏，你仍可回看热门结果风格。
+                </p>
+                <div class="top3-list">
+                  <span>01 热血掌旗官</span>
+                  <span>02 冷静分析师</span>
+                  <span>03 黑马预言家</span>
+                </div>
+                <button class="ghost-btn full">返回首页</button>
+              </section>
             </div>
           </div>
           <p class="frame-title">异常态 / 活动已结束</p>
@@ -253,15 +409,19 @@
 
         <section class="phone-frame">
           <div class="phone-screen status-screen error">
-            <div class="status-orb orb-red"></div>
-            <div class="layer-card status-card">
-              <p class="eyebrow">NETWORK ERROR</p>
-              <h2>网络开了小差</h2>
-              <p class="body-copy">答题进度已保存在本地，网络恢复后可继续从断点返回。</p>
-              <div class="error-actions">
-                <button class="ghost-btn full">返回首页</button>
-                <button class="cta-btn full">重新加载</button>
-              </div>
+            <div class="screen-scroll status-scroll">
+              <div class="status-orb orb-red"></div>
+              <section class="layer-card status-card">
+                <p class="eyebrow">网络异常</p>
+                <h2>网络开了小差</h2>
+                <p class="body-copy">
+                  已答进度会先保存在本地。网络恢复后，你可以从断点继续返回，不需要重新答完整套题。
+                </p>
+                <div class="error-actions">
+                  <button class="ghost-btn full">返回首页</button>
+                  <button class="cta-btn full">重新加载</button>
+                </div>
+              </section>
             </div>
           </div>
           <p class="frame-title">异常态 / 网络异常</p>
@@ -272,4 +432,3 @@
     <script src="./script.js"></script>
   </body>
 </html>
-

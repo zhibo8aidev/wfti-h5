@@ -1,4 +1,8 @@
-document.querySelectorAll(".cta-btn, .ghost-btn, .option-card, .icon-btn").forEach((node) => {
+const pressableNodes = document.querySelectorAll(
+  ".cta-btn, .ghost-btn, .option-card, .icon-btn, .switch-btn"
+);
+
+pressableNodes.forEach((node) => {
   node.addEventListener("click", () => {
     node.animate(
       [
@@ -11,6 +15,18 @@ document.querySelectorAll(".cta-btn, .ghost-btn, .option-card, .icon-btn").forEa
         easing: "ease-out"
       }
     );
+  });
+});
+
+const deviceButtons = document.querySelectorAll(".switch-btn");
+deviceButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.dataset.deviceTarget;
+    document.body.dataset.device = target;
+
+    deviceButtons.forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
   });
 });
 
@@ -44,3 +60,17 @@ if (heroSphere) {
   );
 }
 
+document.querySelectorAll(".status-orb, .poster-figure").forEach((node, index) => {
+  node.animate(
+    [
+      { transform: "translateY(0px)" },
+      { transform: "translateY(-6px)" },
+      { transform: "translateY(0px)" }
+    ],
+    {
+      duration: 3800 + index * 200,
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
