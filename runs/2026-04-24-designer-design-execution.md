@@ -3,13 +3,14 @@
 - stage: design
 - owner: designer
 - agent: ACP Codex
-- started_at: 2026-04-24 15:41 GMT+8
-- completed_at: 2026-04-24 15:48 GMT+8
+- started_at: 2026-04-24 16:02 GMT+8
+- completed_at: 2026-04-24 16:24 GMT+8
 - action summary:
-  - 读取设计说明、mockup、PRD、源设计规范、leader handoff 与整改 run log
-  - 按“真实中文承载优先”重写 `artifacts/design.md`
-  - 重构 HTML mockup，修复结果页、答题页、海报态、异常态与落地页的版式问题
-  - 补充 handoff、execution 与 progress 记录
+  - 读取设计说明、mockup、PRD、源设计规范、hero 参考图与最新 leader handoff
+  - 以 `artifacts/source-design/hero-reference.jpg` 为新基线重写 `artifacts/design.md`
+  - 重构 HTML mockup，把头图视觉语言延展到答题页、结果页、海报态与异常态
+  - 保持上一轮中文承载、版式安全区、结果页滚动结构与底栏关系
+  - 补充 handoff、execution 与 progress 记录，并按要求执行同步脚本
 - outputs produced:
   - artifacts/design.md
   - artifacts/react_native_mockups/index.html
@@ -23,8 +24,8 @@
   - `python3` HTML 解析自检通过
   - `node --check artifacts/react_native_mockups/script.js` 通过
 - notes:
-  - `design.md` 已新增“本轮设计审查修正”章节，明确页面级溢出修复、节奏修复与首屏/续读分层
-  - 结果页从单屏堆叠改为“首屏重点 + 下滑续读 + 固定底栏”
-  - 答题页针对最长题干与最长选项场景重新定版，未通过压小字号解决问题
-  - mockup 增加 `390 x 844` / `430 x 932` 设备比例切换，用于评审两种主流长屏下的成立性
-  - 已执行 `python3 /home/chenhuiming/.openclaw/skills/openspec-orchestrator/scripts/github_push.py wfti-h5 --message "chore: sync wfti-h5 design rework"`，远端同步成功
+  - `design.md` 已新增头图视觉基因提炼与逐页承接说明，明确蓝绿赛场能量、白雾地板、金色高光、弧线速度带与竞技舞台感是本轮统一母体
+  - 落地页 KV 未直接粘贴参考图，而是重新搭建成可实现的蓝绿赛场主舞台
+  - 非头图页面改为同世界观下的抽象延展，未复制完整奖杯与人物构图
+  - 结果页继续保持“首屏结论 + 下滑续读 + 固定底栏”结构，未被新视觉语言破坏
+  - 已执行 `python3 /home/chenhuiming/.openclaw/skills/openspec-orchestrator/scripts/github_push.py wfti-h5 --message "chore: sync wfti-h5 hero reference design"`，同步成功

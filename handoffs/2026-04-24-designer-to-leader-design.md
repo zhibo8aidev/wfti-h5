@@ -12,8 +12,8 @@
   - artifacts/react_native_mockups/script.js
   - artifacts/source-prd/prd.md
   - artifacts/source-design/design-spec.md
-  - handoffs/2026-04-24-leader-to-designer-design-rework-overflow.md
-  - runs/2026-04-24-leader-request-design-rework-overflow.md
+  - artifacts/source-design/hero-reference.jpg
+  - handoffs/2026-04-24-leader-to-designer-hero-reference-update.md
 - Changed artifacts:
   - artifacts/design.md
   - artifacts/react_native_mockups/index.html
@@ -23,28 +23,27 @@
   - runs/2026-04-24-designer-design-execution.md
   - runs/20260424-design-progress.md
 - Blocked items:
-  - 未在浏览器中做像素级截图验收，当前为静态结构与代码层自检通过
+  - 未在浏览器中做像素级截图验收，当前为代码层与结构层自检通过
   - 无额外阻塞项
 - Next owner: leader
 - Entry conditions for next owner:
-  - 校验 `design.md` 已新增“本轮设计审查修正”章节
-  - 校验结果页首屏、滚动档案区、固定底栏三者关系是否清楚
-  - 校验答题页是否按最长题干与最长选项场景重新定版
-  - 校验海报态、异常态与落地页是否完成中文文案承载优化
+  - 校验 `design.md` 已新增“从头图提炼出的视觉基因”与“非头图页面如何承接这些基因”
+  - 校验落地页 KV 是否明显吸收蓝绿赛场、白雾地板、金色高光、弧线速度带与冲刺人物动势
+  - 校验答题页、结果页、海报态、异常态是否看得出与头图属于同一视觉世界，但没有直接复制头图
+  - 校验上一轮已修好的中文承载、首屏/续读/底栏安全区与版式和谐度未被破坏
 - Execution evidence / related runs:
   - runs/2026-04-24-designer-design-execution.md
   - runs/20260424-design-progress.md
 
 ## Summary
-本轮不是重做风格，而是做资深 UI 审稿级整改，核心已从“单屏海报式堆内容”切换为“真实 H5 内容结构”：
+本轮不是把 `hero-reference.jpg` 直接贴进落地页，而是把它拆解成一套可延展的视觉系统并重新落回全站：
 
-- 落地页保留 390px KV 与高亮影棚，但把信息拆成摘要卡与说明卡，底栏上方留出稳定安全区。
-- 答题页按真实中文最长题干与最长选项重排，改成题头区 + 选项区，保证点击热区和阅读舒适度。
-- 结果页重构为首屏重点认领人格，下滑阅读完整档案，雷达图、解析、三联卡与二维码全部下放到滚动内容区。
-- 海报态减文案、稳构图、放松二维码区，不再像结果页截屏。
-- 异常态统一改为成熟中文表达，并控制说明最大宽度，避免长句撑坏卡片。
+- 落地页 KV 改为蓝绿赛场主舞台，明确加入白雾地板、金色奖杯高光、弧线飘带与冲刺人物动势。
+- 非头图页面统一继承蓝绿主调、顶部聚光、底部雾化地板和局部金色点亮，但改用更抽象、更克制的方式承接。
+- 答题页仍以题干和选项承载为先，结果页仍保持“首屏认领 + 下滑续读 + 固定底栏”，没有因视觉增强重新变挤。
+- 海报态与异常态继续保留成熟、可实现、可传播的完成度，没有回到头图元素满屏复制的状态。
 
 ## Review Focus
-- 是否仍然保持 `A 高阶 3D 风格建模`、高亮影棚、底色同步与底部防真空
-- 是否真正解决真实中文文案溢出、裁切、遮挡、拥挤与中英混搭违和
-- 是否在 `390x844` 与 `430x932` 两种长屏比例下都成立
+- 是否一眼能看出非头图页面和头图属于同一套视觉世界观
+- 是否仍满足 `390px KV`、底色同步、底部防真空与高亮影棚调性
+- 是否继续优先服务真实中文文案承载，而不是让装饰重新挤压内容
