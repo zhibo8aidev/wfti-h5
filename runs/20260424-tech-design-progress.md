@@ -1,0 +1,3 @@
+- [2026-04-24 16:05 GMT+8] ACP Codex architect tech design：完成已批准输入阅读，确认本轮交付仅覆盖 H5/WebView MVP，不扩 scope。
+- [2026-04-24 16:18 GMT+8] ACP Codex architect tech design：补读设计稿与 mockup，确认页面结构为落地页、16题答题页、计算过渡页、结果页、海报态，且结果页按“首屏结论 + 下滑续读 + 固定底栏”实现。
+- [2026-04-24 16:31 GMT+8] ACP Codex architect tech design：完成 `artifacts/technical-design.md` 初稿，已覆盖本地人格计算、结果存储/查询、海报生成、bridge 适配、二维码与站内联动边界，并显式标注 `【待接口确认】` / `【待桥接确认】`。
