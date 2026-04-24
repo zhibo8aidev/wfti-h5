@@ -9,6 +9,7 @@ source_inputs:
   - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/source-prd/prd.md
   existing_design:
   - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/source-design/design-spec.md
+  - /home/chenhuiming/.openclaw/projects/wfti-h5/artifacts/source-design/hero-reference.jpg
   existing_repo: []
 available_artifacts:
   proposal_md: true
