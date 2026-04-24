@@ -24,7 +24,7 @@
   - runs/20260424-design-progress.md
 - Blocked items:
   - 未在浏览器中做像素级截图验收，当前为静态结构与代码层自检通过
-  - GitHub 同步脚本需要宿主权限与网络能力
+  - 无额外阻塞项
 - Next owner: leader
 - Entry conditions for next owner:
   - 校验 `design.md` 已新增“本轮设计审查修正”章节

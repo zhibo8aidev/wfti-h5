@@ -27,4 +27,4 @@
   - 结果页从单屏堆叠改为“首屏重点 + 下滑续读 + 固定底栏”
   - 答题页针对最长题干与最长选项场景重新定版，未通过压小字号解决问题
   - mockup 增加 `390 x 844` / `430 x 932` 设备比例切换，用于评审两种主流长屏下的成立性
-  - 指定 GitHub 同步脚本尚待执行宿主权限
+  - 已执行 `python3 /home/chenhuiming/.openclaw/skills/openspec-orchestrator/scripts/github_push.py wfti-h5 --message "chore: sync wfti-h5 design rework"`，远端同步成功
