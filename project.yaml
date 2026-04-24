@@ -83,8 +83,7 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Generate proposal.md and specs/ from the imported source PRD
-- Use the imported H5 design specification as a mandatory design input after PRD approval
+- Generate or import proposal.md and specs/
 orchestration_mode: strong
 validation:
   required_handoffs:
