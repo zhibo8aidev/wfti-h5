@@ -1,1 +1,2 @@
 - [2026-04-27 10:06 GMT+8] 已阅读 project.yaml、technical-design、tasks、design、mockup 与 leader handoff，确认仓库无现成前端骨架，采用无构建依赖 H5 SPA 方案落地。
+- [2026-04-27 10:22 GMT+8] 已创建 `index.html`、`package.json` 与 `src/` 前端骨架，完成题库、人格元数据、人格计算引擎、状态机页面、bridge/mock/service、海报生成与埋点接入位首版实现。

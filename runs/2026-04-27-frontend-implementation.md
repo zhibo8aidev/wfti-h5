@@ -23,3 +23,12 @@
 - `artifacts/client-implementation.md`
 - `handoffs/2026-04-27-frontend-to-tester-implementation.md`
 - `runs/20260427-frontend-implementation-progress.md`
+
+## Build Notes
+- 采用无构建依赖的原生 ES Modules H5 SPA，便于仓库从零起步直接评审。
+- URL 参数 `?mode=mock` 为默认开发链路，`?mode=real` 用于验证 adapter 占位收口。
+- 海报生成使用 Canvas，避免引入第三方截图依赖。
+
+## Verification
+- `npm test` 通过，验证人格引擎核心规则。
+- GitHub 同步脚本已执行。
