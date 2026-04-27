@@ -1,0 +1,1 @@
+- [2026-04-27 10:06 GMT+8] 已阅读 project.yaml、technical-design、tasks、design、mockup 与 leader handoff，确认仓库无现成前端骨架，采用无构建依赖 H5 SPA 方案落地。
