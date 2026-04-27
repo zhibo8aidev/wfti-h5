@@ -1,0 +1,56 @@
+{
+  "records": {
+    "12345": {
+      "uid": "12345",
+      "personality_code": "COMMANDER",
+      "personality_name": "热血掌旗官",
+      "answers": [
+        "A",
+        "B",
+        "C",
+        "A",
+        "B",
+        "C",
+        "A",
+        "B",
+        "C",
+        "A",
+        "B",
+        "C",
+        "A",
+        "B",
+        "C",
+        "A"
+      ],
+      "raw_scores": {
+        "F1": 3,
+        "F2": 4,
+        "E1": 6,
+        "E2": 5,
+        "S1": 6,
+        "S2": 5,
+        "A1": 5,
+        "A2": 4
+      },
+      "level_vector": [
+        "M",
+        "M",
+        "H",
+        "H",
+        "H",
+        "H",
+        "H",
+        "M"
+      ],
+      "client_env": {
+        "platform": "app_webview",
+        "app_version": "8.1.0"
+      },
+      "computed_at": "2026-04-27T10:20:00+08:00",
+      "updated_at": "2026-04-27T02:05:18.990Z",
+      "version": 1,
+      "overwrite": false,
+      "idempotent_hit": false
+    }
+  }
+}

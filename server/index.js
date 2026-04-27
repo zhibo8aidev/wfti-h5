@@ -143,7 +143,7 @@ function handleGetLinkagePayload(requestUrl, res) {
 }
 
 const server = http.createServer((req, res) => {
-  route(req, res).catch((error) => {
+  Promise.resolve(route(req, res)).catch((error) => {
     sendError(res, error);
   });
 });
