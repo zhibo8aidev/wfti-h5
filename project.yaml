@@ -1,8 +1,8 @@
 project_id: wfti-h5
 title: 世界杯球迷人格大鉴赏（WFTI）H5 活动
 client_target: both
-current_stage: tech_review
-stage_status: waiting_review
+current_stage: implementation
+stage_status: blocked
 source_inputs:
   idea: 开发一个嵌入直播吧 App 的世界杯球迷人格大鉴赏（WFTI）H5 活动，支持 16 题测试、人格结果、海报分享与站内联动。
   existing_prd:
@@ -21,8 +21,7 @@ available_artifacts:
   backend_code: false
   test_report: false
   release_plan: false
-pending_reviews:
-- tech_review
+pending_reviews: []
 openspec_change_id: null
 react_native_mockups:
   status: ready_for_review
@@ -88,16 +87,25 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Wait for explicit technical approval
+- 'Frontend handoff missing: record frontend implementation handoff before QA'
+- 'Backend handoff missing: record backend implementation handoff before QA'
+- 'Frontend run missing: record ACP Codex frontend execution before QA'
+- 'Backend run missing: record ACP Codex backend execution before QA'
 orchestration_mode: strong
 validation:
-  required_handoffs: []
-  required_runs: []
-  artifact_origin_verified: true
-  last_validation_note: null
+  required_handoffs:
+  - frontend -> tester
+  - backend -> tester
+  required_runs:
+  - ACP Codex frontend run
+  - ACP Codex backend run
+  artifact_origin_verified: false
+  last_validation_note: Implementation artifacts are not promotable without separate
+    frontend/backend handoffs and ACP Codex run evidence.
 last_decision:
-  stage: design_review
+  stage: tech_review
   decision: approved
-  by: leader
-  at: '2026-04-24T15:58:17'
-  note: 批准设计 wfti-h5
+  by: ou_22936cda9ac7dc4c5286b748ec7f42c5
+  at: '2026-04-27T09:58:32'
+  note: Feishu group approval from current thread; approve technical design/tasks
+    and advance to implementation.
