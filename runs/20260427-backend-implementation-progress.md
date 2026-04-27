@@ -1,0 +1,2 @@
+- [2026-04-27 10:05 GMT+8] 阅读 `project.yaml`、`artifacts/technical-design.md`、`artifacts/tasks.md`、`artifacts/design.md`、`handoffs/2026-04-27-leader-to-backend-implementation.md`，确认后端以 mock/service adapter 方式直接推进。
+- [2026-04-27 10:18 GMT+8] 创建 `server/` 最小后端骨架，落地结果写入、结果查询、活动配置、站内联动消费边界与本地文件仓实现。

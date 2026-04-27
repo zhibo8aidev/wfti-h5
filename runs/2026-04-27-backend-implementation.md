@@ -1,0 +1,21 @@
+# 2026-04-27 ACP Codex backend implementation
+
+- project: `wfti-h5`
+- owner: `backend`
+- runtime: `ACP`
+- agent: `Codex`
+- started_at: `2026-04-27 10:00 GMT+8`
+- cwd: `/home/chenhuiming/.openclaw/projects/wfti-h5`
+- scope:
+  - 基于已批准 OpenSpec 工件实现最小后端 mock/service
+  - 结果存储/查询与覆盖写入
+  - 海报生成支撑配置、二维码与站内联动配置消费
+  - 联调所需接口说明、运行记录、handoff
+- constraints:
+  - `【待接口确认】` / `【待桥接确认】` 不阻塞，实现为可替换 adapter
+  - 不代替前端工作，不推进审批
+- outputs:
+  - `server/`
+  - `artifacts/backend-implementation.md`
+  - `handoffs/2026-04-27-backend-to-tester-implementation.md`
+  - `runs/20260427-backend-implementation-progress.md`

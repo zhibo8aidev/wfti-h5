@@ -1,0 +1,10 @@
+{
+  "name": "wfti-h5-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal backend mock/service for WFTI H5",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test server/**/*.test.js"
+  }
+}
