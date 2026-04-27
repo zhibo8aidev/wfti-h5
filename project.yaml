@@ -17,8 +17,8 @@ available_artifacts:
   design_md: true
   react_native_mockups: true
   tasks_md: true
-  client_code: false
-  backend_code: false
+  client_code: true
+  backend_code: true
   test_report: false
   release_plan: false
 pending_reviews: []
@@ -87,7 +87,8 @@ execution_policy:
     - design.md
     - tasks.md
 next_actions:
-- Complete implementation and self-test evidence
+- Backend rework: add runnable `npm start` entry and align handoff verification commands
+- After rework lands, re-check implementation exit criteria and promote to QA
 orchestration_mode: strong
 validation:
   required_handoffs:
@@ -97,7 +98,7 @@ validation:
   - ACP Codex frontend run
   - ACP Codex backend run
   artifact_origin_verified: true
-  last_validation_note: null
+  last_validation_note: '2026-04-27 leader audit: frontend/backend artifacts and handoffs exist, but backend handoff asks tester to run `npm start` while root package.json lacks a start script, so QA handoff is not yet clean.'
 last_decision:
   stage: tech_review
   decision: approved
