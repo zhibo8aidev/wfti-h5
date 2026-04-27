@@ -19,3 +19,17 @@
   - `artifacts/backend-implementation.md`
   - `handoffs/2026-04-27-backend-to-tester-implementation.md`
   - `runs/20260427-backend-implementation-progress.md`
+- implementation_summary:
+  - 以 Node.js 内置 `http` 搭建零依赖最小服务
+  - 提供结果写入、结果查询、活动配置、站内联动消费边界接口
+  - 使用本地 JSON 文件仓实现覆盖写入与幂等判定
+  - 通过配置接口下发二维码、分享文案、海报 schema、站内路由信息
+- verification:
+  - `npm test` 通过
+  - `GET /healthz` 返回正常
+  - `POST /api/wfti/result` 验证首写成功
+  - `POST /api/wfti/result` 同 payload 验证 `idempotent_hit=true`
+  - `POST /api/wfti/result` 新 payload 验证 `version=2` 且 `overwrite=true`
+  - `GET /api/wfti/result/latest` / `GET /api/wfti/config` / `GET /api/wfti/linkage/latest` 返回符合预期
+- completed_at: `2026-04-27 10:36 GMT+8`
+- status: `completed`

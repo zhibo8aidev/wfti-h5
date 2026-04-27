@@ -2,8 +2,8 @@
   "records": {
     "12345": {
       "uid": "12345",
-      "personality_code": "COMMANDER",
-      "personality_name": "热血掌旗官",
+      "personality_code": "HERO",
+      "personality_name": "逆风英雄",
       "answers": [
         "A",
         "B",
@@ -11,7 +11,7 @@
         "A",
         "B",
         "C",
-        "A",
+        "C",
         "B",
         "C",
         "A",
@@ -20,17 +20,17 @@
         "A",
         "B",
         "C",
-        "A"
+        "C"
       ],
       "raw_scores": {
         "F1": 3,
         "F2": 4,
-        "E1": 6,
+        "E1": 5,
         "E2": 5,
         "S1": 6,
         "S2": 5,
         "A1": 5,
-        "A2": 4
+        "A2": 5
       },
       "level_vector": [
         "M",
@@ -40,16 +40,16 @@
         "H",
         "H",
         "H",
-        "M"
+        "H"
       ],
       "client_env": {
         "platform": "app_webview",
         "app_version": "8.1.0"
       },
-      "computed_at": "2026-04-27T10:20:00+08:00",
-      "updated_at": "2026-04-27T02:05:18.990Z",
-      "version": 1,
-      "overwrite": false,
+      "computed_at": "2026-04-27T10:45:00+08:00",
+      "updated_at": "2026-04-27T02:06:13.081Z",
+      "version": 2,
+      "overwrite": true,
       "idempotent_hit": false
     }
   }
