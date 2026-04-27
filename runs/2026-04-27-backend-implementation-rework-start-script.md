@@ -1,0 +1,31 @@
+# 2026-04-27 ACP Codex backend implementation rework: start script
+
+- project: `wfti-h5`
+- owner: `backend`
+- runtime: `ACP`
+- agent: `Codex`
+- started_at: `2026-04-27 14:26 GMT+8`
+- cwd: `/home/chenhuiming/.openclaw/projects/wfti-h5`
+- scope:
+  - 修正 QA handoff 阻塞项：项目根缺少可运行 `npm start`
+  - 不新增无关依赖，不扩展已批准功能范围
+- inputs:
+  - `project.yaml`
+  - `handoffs/2026-04-27-leader-to-backend-implementation-rework-start-script.md`
+  - `handoffs/2026-04-27-backend-to-tester-implementation.md`
+  - `runs/2026-04-27-backend-implementation.md`
+  - `artifacts/backend-implementation.md`
+  - `package.json`
+- changes:
+  - `package.json` 增加 `start: node ./server/index.js`
+  - `package.json` 的 `test` 同步覆盖后端 `server/server.test.js`
+  - `server/*.js` 从 CommonJS 调整为 ESM，匹配根包 `"type": "module"`
+  - `server/index.js` 默认监听 `127.0.0.1:8787`
+  - 同步 backend artifact、tester handoff 与原 implementation run addendum
+- verification:
+  - `npm test` 通过
+  - `npm start` 可启动服务
+  - `curl http://127.0.0.1:8787/healthz` 返回 `ok: true`
+- qa_blockers:
+  - 未发现新的 QA 阻塞
+- status: `completed`

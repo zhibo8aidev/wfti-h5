@@ -1,17 +1,18 @@
-const http = require("node:http");
-const { URL } = require("node:url");
-const { createResultRepository } = require("./result-repository");
-const { getActivityConfig, buildPosterPayload, buildLinkagePayload } = require("./wfti-config");
-const {
+import http from "node:http";
+import { URL } from "node:url";
+import {
   badRequest,
   json,
   methodNotAllowed,
   notFound,
   readJsonBody,
   sendError,
-} = require("./http-utils");
-const { validateResultPayload, validateUidQuery } = require("./validators");
+} from "./http-utils.js";
+import { createResultRepository } from "./result-repository.js";
+import { validateResultPayload, validateUidQuery } from "./validators.js";
+import { buildLinkagePayload, buildPosterPayload, getActivityConfig } from "./wfti-config.js";
 
+const host = process.env.HOST || "127.0.0.1";
 const port = Number(process.env.PORT || 8787);
 const repository = createResultRepository();
 
@@ -148,6 +149,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`WFTI backend listening on http://127.0.0.1:${port}`);
+server.listen(port, host, () => {
+  console.log(`WFTI backend listening on http://${host}:${port}`);
 });

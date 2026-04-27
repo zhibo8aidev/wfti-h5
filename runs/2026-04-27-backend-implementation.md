@@ -33,3 +33,16 @@
   - `GET /api/wfti/result/latest` / `GET /api/wfti/config` / `GET /api/wfti/linkage/latest` 返回符合预期
 - completed_at: `2026-04-27 10:36 GMT+8`
 - status: `completed`
+
+## Rework Addendum: start script for QA handoff
+- rework_at: `2026-04-27 14:28 GMT+8`
+- reason: leader audit found tester handoff referenced `npm start` while root `package.json` lacked a runnable start script.
+- changes:
+  - added root `npm start` script for `node ./server/index.js`
+  - updated root `npm test` to include backend `server/server.test.js`
+  - aligned backend service modules with project ESM package type so `npm start` can execute
+  - set default host to `127.0.0.1`, matching handoff health check
+- verification:
+  - `npm test` passed
+  - `npm start` launched service at `http://127.0.0.1:8787`
+  - `GET /healthz` returned `ok: true`

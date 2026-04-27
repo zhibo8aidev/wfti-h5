@@ -24,6 +24,8 @@
   - `artifacts/backend-implementation.md`
   - `runs/20260427-backend-implementation-progress.md`
   - `runs/2026-04-27-backend-implementation.md`
+  - `runs/20260427-backend-implementation-rework-progress.md`
+  - `runs/2026-04-27-backend-implementation-rework-start-script.md`
 - New capabilities:
   - `POST /api/wfti/result`
   - `GET /api/wfti/result/latest`
@@ -45,7 +47,10 @@
 ## Run / Verification
 - `npm test`
 - `npm start`
+- `curl http://127.0.0.1:8787/healthz`
 - 建议 tester 结合 curl 或前端联调页验证完整闭环：查询历史结果 -> 写入结果 -> 覆盖写入 -> 回查 -> 配置消费
+
+说明：`npm start` 已在项目根可直接执行，默认监听 `127.0.0.1:8787`；`npm test` 覆盖前端人格引擎域测试与后端 `node:test` 单测。
 
 ## Artifact Origin Assertion
 - 本 handoff 与实现产物由 `backend` 在 `ACP Codex` 会话中生成，基于已批准 OpenSpec 工件执行。

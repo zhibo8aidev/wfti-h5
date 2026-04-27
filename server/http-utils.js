@@ -1,4 +1,4 @@
-function json(res, statusCode, payload) {
+export function json(res, statusCode, payload) {
   res.writeHead(statusCode, {
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": "no-store",
@@ -6,7 +6,7 @@ function json(res, statusCode, payload) {
   res.end(JSON.stringify(payload, null, 2));
 }
 
-function badRequest(res, code, details) {
+export function badRequest(res, code, details) {
   return json(res, 400, {
     success: false,
     error: {
@@ -16,7 +16,7 @@ function badRequest(res, code, details) {
   });
 }
 
-function notFound(res, routeKey) {
+export function notFound(res, routeKey) {
   return json(res, 404, {
     success: false,
     error: {
@@ -26,7 +26,7 @@ function notFound(res, routeKey) {
   });
 }
 
-function methodNotAllowed(res, pathname) {
+export function methodNotAllowed(res, pathname) {
   return json(res, 405, {
     success: false,
     error: {
@@ -36,7 +36,7 @@ function methodNotAllowed(res, pathname) {
   });
 }
 
-function readJsonBody(req) {
+export function readJsonBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
     req.on("data", (chunk) => chunks.push(chunk));
@@ -56,7 +56,7 @@ function readJsonBody(req) {
   });
 }
 
-function sendError(res, error) {
+export function sendError(res, error) {
   const statusCode = error.statusCode || 500;
   return json(res, statusCode, {
     success: false,
@@ -66,12 +66,3 @@ function sendError(res, error) {
     },
   });
 }
-
-module.exports = {
-  badRequest,
-  json,
-  methodNotAllowed,
-  notFound,
-  readJsonBody,
-  sendError,
-};

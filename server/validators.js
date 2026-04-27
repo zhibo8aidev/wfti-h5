@@ -2,14 +2,14 @@ const allowedAnswers = new Set(["A", "B", "C"]);
 const scoreKeys = ["F1", "F2", "E1", "E2", "S1", "S2", "A1", "A2"];
 const levelKeys = new Set(["L", "M", "H"]);
 
-function validateUidQuery(uid) {
+export function validateUidQuery(uid) {
   if (typeof uid !== "string" || uid.trim() === "") {
     return { ok: false, errors: ["uid is required"] };
   }
   return { ok: true, value: uid.trim() };
 }
 
-function validateResultPayload(payload) {
+export function validateResultPayload(payload) {
   const errors = [];
   if (!payload || typeof payload !== "object") {
     return { ok: false, errors: ["payload must be an object"] };
@@ -77,8 +77,3 @@ function validateResultPayload(payload) {
     },
   };
 }
-
-module.exports = {
-  validateResultPayload,
-  validateUidQuery,
-};

@@ -1,7 +1,7 @@
-const test = require("node:test");
-const assert = require("node:assert/strict");
-const { validateResultPayload } = require("./validators");
-const { getActivityConfig, buildLinkagePayload } = require("./wfti-config");
+import test from "node:test";
+import assert from "node:assert/strict";
+import { validateResultPayload } from "./validators.js";
+import { buildLinkagePayload, getActivityConfig } from "./wfti-config.js";
 
 test("validateResultPayload accepts a valid payload", () => {
   const result = validateResultPayload({

@@ -6,6 +6,8 @@
 - 所有 `【待接口确认】` 项统一收口在 adapter 边界，后续替换真实接口时不改调用语义。
 
 ## 2. 本次交付
+- `package.json`
+  - 提供项目根 `npm start` 与 `npm test`，tester 可直接在根目录执行启动与验证命令。
 - `server/index.js`
   - 提供 HTTP 服务入口。
 - `server/result-repository.js`
@@ -119,13 +121,17 @@ npm start
 ```
 
 - 默认端口：`8787`
+- 默认监听：`127.0.0.1`
 - 健康检查：`http://127.0.0.1:8787/healthz`
+- 可通过 `PORT` / `HOST` 环境变量覆盖本地启动参数。
 
 ## 7. 自测方式
 
 ```bash
 npm test
 ```
+
+- 当前 `npm test` 覆盖前端人格引擎域测试与后端 `server/server.test.js`。
 
 可联调用例：
 

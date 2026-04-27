@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node ./src/domains/personalityEngine.test.js"
+    "start": "node ./server/index.js",
+    "test": "node ./src/domains/personalityEngine.test.js && node --test ./server/server.test.js"
   }
 }

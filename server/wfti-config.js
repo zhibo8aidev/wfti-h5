@@ -1,4 +1,4 @@
-function getActivityConfig(uid) {
+export function getActivityConfig(uid) {
   const now = new Date().toISOString();
   return {
     activity: {
@@ -38,7 +38,7 @@ function getActivityConfig(uid) {
   };
 }
 
-function buildPosterPayload(config) {
+export function buildPosterPayload(config) {
   return {
     title: "string",
     personality_name: "string",
@@ -51,7 +51,7 @@ function buildPosterPayload(config) {
   };
 }
 
-function buildLinkagePayload(result) {
+export function buildLinkagePayload(result) {
   return {
     uid: result.uid,
     personality_code: result.personality_code,
@@ -70,9 +70,3 @@ function buildLinkagePayload(result) {
     ],
   };
 }
-
-module.exports = {
-  buildLinkagePayload,
-  buildPosterPayload,
-  getActivityConfig,
-};
